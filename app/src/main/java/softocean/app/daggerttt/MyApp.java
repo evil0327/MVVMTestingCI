@@ -14,6 +14,7 @@ public class MyApp extends Application{
     public void onCreate() {
         super.onCreate();
 
+
         MyDaggerComponent daggerComponent = DaggerMyDaggerComponent.builder()
                 .appModule(new AppModule(this)) // This also corresponds to the name of your module: %component_name%Module
                 .repoModule(new RepoModule())
