@@ -1,10 +1,8 @@
 package softocean.app.daggerttt.ui;
 
-import android.arch.lifecycle.ViewModelProvider;
-import android.support.v7.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-
-import javax.inject.Inject;
 
 import softocean.app.daggerttt.R;
 

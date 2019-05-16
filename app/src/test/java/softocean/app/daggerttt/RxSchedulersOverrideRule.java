@@ -30,7 +30,7 @@ public class RxSchedulersOverrideRule implements TestRule {
         public Worker createWorker() {
             return new ExecutorScheduler.ExecutorWorker(new Executor() {
                 @Override
-                public void execute(@android.support.annotation.NonNull Runnable command) {
+                public void execute(@androidx.annotation.NonNull Runnable command) {
                     command.run();
                 }
             });

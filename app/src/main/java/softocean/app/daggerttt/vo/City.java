@@ -1,10 +1,10 @@
 package softocean.app.daggerttt.vo;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 @Entity(tableName = "city")
 public class City {
     @PrimaryKey

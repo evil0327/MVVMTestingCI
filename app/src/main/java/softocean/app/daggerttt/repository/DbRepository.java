@@ -1,9 +1,7 @@
 package softocean.app.daggerttt.repository;
 
 import android.app.Application;
-import android.arch.persistence.room.Room;
-import android.content.Context;
-import android.content.SharedPreferences;
+import androidx.room.Room;
 
 import java.util.List;
 

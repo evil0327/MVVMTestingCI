@@ -1,6 +1,6 @@
 package softocean.app.daggerttt;
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule;
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -11,10 +11,8 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import io.reactivex.Observable;
 import io.reactivex.Single;
 import retrofit2.Response;
 import softocean.app.daggerttt.repository.ApiRepository;

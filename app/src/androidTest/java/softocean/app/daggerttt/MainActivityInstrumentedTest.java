@@ -1,36 +1,31 @@
 package softocean.app.daggerttt;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 import android.content.Context;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import android.support.test.rule.ActivityTestRule;
-import android.view.View;
+import androidx.test.rule.ActivityTestRule;
 
 import java.util.List;
 
-import io.reactivex.annotations.NonNull;
-import softocean.app.daggerttt.repository.ApiRepository;
-import softocean.app.daggerttt.repository.DbRepository;
 import softocean.app.daggerttt.testing.TestActivity;
 import softocean.app.daggerttt.ui.MainFragment;
 import softocean.app.daggerttt.vm.MainViewModel;
 import softocean.app.daggerttt.vo.City;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
@@ -73,12 +68,16 @@ public class MainActivityInstrumentedTest {
     }
 
     @Test
-    public void testMain() {
+    public void test_loading_show_and_hide() {
         mainViewModel.getLoadingLiveData().postValue(true);
-
         onView(withId(R.id.loading)).check(matches(isDisplayed()));
         mockLoadingLiveData.postValue(false);
         onView(withId(R.id.loading)).check(matches(not(isDisplayed())));
+    }
+
+    @Test
+    public void test_recyclerview_size() {
+
     }
 
 
