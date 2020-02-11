@@ -50,19 +50,6 @@ public class MainViewModelUnitTest {
         mainViewModel  = new MainViewModel(dbRepository, apiRepository);
     }
 
-    @Test
-    public void test_getCityList(){
-        City city = new City();
-        city.setName("aaa");
-        FAKE_CITY_LIST.add(city);
-
-        Response<List<City>> res = Response.success(FAKE_CITY_LIST);
-        when(apiRepository.getCityList()).thenReturn(Single.just(res));
-
-        mainViewModel.getCityList();
-
-        Assert.assertEquals(mainViewModel.getCityLiveData().getValue().size(), 1);
-    }
 
     @Test
     public void addition_isCorrect() {
